@@ -1,3 +1,9 @@
+# to get arbitrary number of integer from input command
+def my_get_int(split_char=' '):
+    a = list(map(int, input().split(split_char)))
+    return a
+
+
 # this is a function used for slicing in 2D python list
 def list_2D_slicing(l_2D,row_start,num_row,col_start,num_col):
     res=[]
@@ -34,3 +40,32 @@ def num_of_substr(s,key,start):
     return(num)
 
 
+# how to create a 2D empty array with a specific size
+def array_2D_empty(n,m):
+    
+    res=[]
+    for i in range(n):
+        res.append([[]]*m)
+
+    return(res)
+
+def fibo(n):
+    res=[]
+    if n==1:
+        res.append(1)
+    elif n==2:
+        res.append(1)
+        res.append(1)
+    else:
+        res=[1,1]
+        for i in range(2,n):
+            res.append(res[-1]+res[-2])
+    return(res)
+
+
+
+
+if __name__ == "__main__":
+    
+    a=my_get_int()
+    print(a)
